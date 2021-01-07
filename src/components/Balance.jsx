@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { TransactionContext } from "../ContextApi";
 
 const Balance = () => {
-    return (
-        <div className="balance">
-            <h3>Balance<br/><span className="balance-amount">$500</span></h3>
-        </div>
-    )
-}
+  const transactions = useContext(TransactionContext);
 
-export default Balance
+  const totalBalance = transactions.reduce((accu, nextValue) => {
+    return { amount: accu.amount + nextValue.amount };
+  });
+
+  return (
+    <div className="balance">
+      <h3>
+        Balance
+        <br />
+        <span className="balance-amount">${totalBalance.amount}</span>
+      </h3>
+    </div>
+  );
+};
+
+export default Balance;
