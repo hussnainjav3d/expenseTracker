@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    line-height: 1.6;
+    font-family: cursive;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+    list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    width: 500px;
+    margin: 5px auto;
+    padding: 0 2rem;
+    background-color: #eee;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.75);
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.balance-amount {
+    font-size: 21px;
+    line-height: 0.1;
+}
+
+.income-expense {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+
+.red {
+    color: red;
+    font-weight: bolder;
+}
+
+.green {
+    color: green;
+    font-weight: bolder;
+}
+
+.transaction-list li {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.75);
+    margin: 10px 0;
+    padding: 0.4rem 0.8rem;
+    position: relative;
+}
+
+.income {
+    border-right: 5px solid green;
+}
+
+.expense {
+    border-right: 5px solid red;
+}
+
+.transaction-list li button {
+    display: none;
+    position: absolute;
+    left: -10px;
+    top: 8px;
+    background-color: rgb(139, 104, 104);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.transaction-list li:hover button {
+    display: block;
+}
+
+.form-control {
+    margin-top: 2rem;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-bottom: 2px solid rgb(127, 96, 158);
+    outline: none;
+    font-weight: bold;
+    background-color: #eee;
+    margin: 5px 0;
+}
+
+.form-control .btn {
+    background-color: rgb(127, 96, 158);
+    color: #eee;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-radius: 1000px;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: opacity 0.25s, transform .25s ease-out;
+}
+
+.btn:hover {
+    opacity: 0.89;
+    border: 3px solid #333;
+    transform: scale(1.01);
 }
