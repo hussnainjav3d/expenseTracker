@@ -6,7 +6,6 @@
 
 body {
     line-height: 1.6;
-
 }
 
 ul {
@@ -75,9 +74,10 @@ ul {
 .transaction-list li button {
     display: none;
     position: absolute;
-    left: -10px;
+    left: -14px;
     top: 8px;
-    background-color: rgb(139, 104, 104);
+    padding: 2px;
+    background-color: rgb(206, 0, 0);
     color: #fff;
     cursor: pointer;
     outline: none;
@@ -106,7 +106,7 @@ ul {
     background-color: rgb(127, 96, 158);
     color: #eee;
     text-transform: uppercase;
-    padding: 10px 0;
+    padding: 15px 0;
     border-radius: 1000px;
     margin: 20px 0;
     cursor: pointer;
