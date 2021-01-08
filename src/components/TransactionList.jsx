@@ -3,7 +3,7 @@ import { TransactionContext } from "../ContextApi";
 import Transaction from "./Transaction";
 
 const TransactionList = () => {
-  const transactions = useContext(TransactionContext);
+  const { transactions } = useContext(TransactionContext);
   return (
     <>
       History

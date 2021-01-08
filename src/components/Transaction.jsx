@@ -1,6 +1,8 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { TransactionContext } from "../ContextApi";
 const Transaction = ({ transaction }) => {
+  const { deleteTransaction } = useContext(TransactionContext);
+
   const sign = transaction.amount < 0 ? "-" : "";
   const border = transaction.amount < 0 ? "expense" : "income";
   return (
@@ -10,7 +12,7 @@ const Transaction = ({ transaction }) => {
         <span>
           {sign} ${Math.abs(transaction.amount)}
         </span>
-        <button>x</button>
+        <button onClick={(e) => deleteTransaction(transaction.id)}>x</button>
       </li>
     </>
   );
