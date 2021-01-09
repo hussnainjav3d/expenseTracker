@@ -8,7 +8,11 @@ const TransactionForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    addTransaction({ amount: +newAmount, desc: newDesc, id: Date.now() });
+    if (newAmount === "0") {
+      return;
+    } else {
+      addTransaction({ amount: +newAmount, desc: newDesc, id: Date.now() });
+    }
     setAmount("");
     setDesc("");
   };
