@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
-import { TransactionContext } from "../ContextApi";
+import React from "react";
+import { useSelector } from "react-redux";
 
 const IncomeExpense = () => {
-  const { transactions } = useContext(TransactionContext);
+  const transactions = useSelector((state) => {
+    return state;
+  });
   let income = 0;
   let expense = 0;
   if (transactions.length === 0) {

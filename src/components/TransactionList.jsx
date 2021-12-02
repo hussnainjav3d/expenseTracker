@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { TransactionContext } from "../ContextApi";
+import React from "react";
+import { useSelector } from "react-redux";
 import Transaction from "./Transaction";
 
 const TransactionList = () => {
-  const { transactions } = useContext(TransactionContext);
+  const transactions = useSelector((state) => state);
   return (
     <>
       History

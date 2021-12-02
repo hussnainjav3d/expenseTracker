@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
-import { TransactionContext } from "../ContextApi";
+import React from "react";
+import { useSelector } from "react-redux";
 
 const Balance = () => {
-  const { transactions } = useContext(TransactionContext);
+  const transactions = useSelector((state) => state);
+  console.log(transactions);
+  // const { transactions } = useContext(TransactionContext);
   let total = 0;
   if (transactions.length === 0) {
     total = 0;

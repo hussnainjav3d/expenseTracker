@@ -1,8 +1,10 @@
-import React, { useContext, useState } from "react";
-import { TransactionContext } from "../ContextApi";
+import React, { useState } from "react";
+
+import { useDispatch } from "react-redux";
+import { addTransaction } from "../store/Action";
 
 const TransactionForm = () => {
-  let { addTransaction } = useContext(TransactionContext);
+  const dispatch = useDispatch();
   const [newAmount, setAmount] = useState("");
   const [newDesc, setDesc] = useState("");
 
@@ -11,7 +13,9 @@ const TransactionForm = () => {
     if (newAmount === "0") {
       return;
     } else {
-      addTransaction({ amount: +newAmount, desc: newDesc, id: Date.now() });
+      dispatch(
+        addTransaction({ amount: +newAmount, desc: newDesc, id: Date.now() })
+      );
     }
     setAmount("");
     setDesc("");
