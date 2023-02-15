@@ -22,32 +22,19 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <!-- Meta Pixel Code -->
+  <!-- Start Open Pixel Snippet -->
+
   <script>
-    ! function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '6213468352021192');
-    fbq('track', 'PageView');
+    ! function (e, t, n, p, o, s, i) {
+      e[p] || ((o = e[p] = function () {
+          o.process ? o.process.apply(o, arguments) : o.queue.push(arguments)
+        }).queue = [], o.t = +new Date, (s = t.createElement(n)).async = 1, s.src =
+        "https://brackets-openpixel.surge.sh/openpixel.js?t=" + 864e5 * Math.ceil(new Date / 864e5), (i = t
+          .getElementsByTagName(n)[0]).parentNode.insertBefore(s, i))
+    }(window, document, "script", "opix"), opix("init", "ID-XXXXXXXX"), opix("event", "pageload", USER_ID);
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=6213468352021192&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
+
+  <!-- End Open Pixel Snippet -->
   <title>Expense Tracker | Hussnain Javed</title>
 </head>
 
