@@ -47,7 +47,7 @@ const TransactionForm = () => {
         onChange={(e) => setAmount(e.target.value)}
       />
       <input
-        data-opix-event="special-button-click"
+        data-opix-event="addTransaction"
         type="submit"
         value="Add Transaction"
         className="btn"
