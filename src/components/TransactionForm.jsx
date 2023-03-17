@@ -46,7 +46,12 @@ const TransactionForm = () => {
         required
         onChange={(e) => setAmount(e.target.value)}
       />
-      <input type="submit" value="Add Transaction" className="btn" />
+      <input
+        data-opix-event="special-button-click"
+        type="submit"
+        value="Add Transaction"
+        className="btn"
+      />
     </form>
   );
 };
