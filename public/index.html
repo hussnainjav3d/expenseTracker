@@ -23,6 +23,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 <script async src="https://analytics.umami.is/script.js" data-website-id="5e0ba4a3-2f88-41b7-84b1-a8537cc8c5ce"></script>
+  <script>
+  console.log("this is my own script");
+  console.log("cookies of my site", document.cookie.split('; '));
+
+
+  document.cookie = "uniqueId=000456; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/";
+
+  console.log("cookies of my site", document.cookie.split('; ').map((c)=>{
+    const [cookieName, cookieValue] = c.split('=');
+    return {cookieName, cookieValue}
+  }));
+
+</script>
      <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
